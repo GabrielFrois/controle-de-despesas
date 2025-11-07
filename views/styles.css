@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+h2 {
+    text-align: center;
+    color: #34495e;
+    margin: 20px 0;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+#expenseForm {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 15px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    align-items: end;
+}
+
+#expenseForm input {
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+#expenseForm input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    font-size: 1rem;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#btnSubmit {
+    background-color: #28a745;
+    height: 45px;
+}
+
+#btnSubmit:hover {
+    background-color: #218838;
+}
+
+#expenseList {
+    margin-top: 20px;
+}
+
+.expense-item {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.2s;
+}
+
+.expense-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.expense-item span {
+    font-size: 1.1rem;
+    color: #495057;
+}
+
+.expense-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-alterar {
+    background-color: #007bff;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+.btn-alterar:hover {
+    background-color: #0069d9;
+}
+
+.btn-excluir {
+    background-color: #dc3545;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+.btn-excluir:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    #expenseForm {
+        grid-template-columns: 1fr;
+    }
+    
+    #btnSubmit {
+        width: 100%;
+    }
+
+    .expense-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .expense-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
